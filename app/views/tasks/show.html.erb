@@ -12,7 +12,7 @@
       </div>
       
       <% if @task.image.attached? %>
-        <div class="flex-shrink-0 sm:w-48 sm:h-48 w-full h-40">
+        <div class="flex-shrink-0 sm:w-48 sm:h-48 w-full h-full">
           <%= image_tag @task.image, class: "w-full h-full object-cover rounded-md border border-gray-200" %>
         </div>
       <% end %>

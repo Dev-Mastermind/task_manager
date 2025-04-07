@@ -43,11 +43,7 @@
     <% if task.image.attached? %>
       <div class="border border-gray-200 rounded-md p-4">
         <div class="flex items-center space-x-4">
-          <%= image_tag task.image, class: "h-20 w-20 object-cover rounded-md" %>
-          <div class="flex items-center">
-            <%= form.check_box :remove_image, class: "h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" %>
-            <%= form.label :remove_image, class: "ml-2 block text-sm text-gray-700" %>
-          </div>
+          <%= image_tag task.image, class: "h-20 w-25 object-cover rounded-md" %>
         </div>
       </div>
     <% end %>

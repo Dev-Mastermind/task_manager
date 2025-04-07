@@ -30,22 +30,10 @@ class TasksController < ApplicationController
   end
 
   def update
-    if params[:task][:remove_image] == "1" && @task.image.attached?
-      @task.image.purge
-    end
-
-    if @task.update(task_params.except(:remove_image))
-      if request.format.html?
-        redirect_to task_url(@task), notice: "Task was successfully updated."
-      else
-        render :show, status: :ok, location: @task
-      end
+    if @task.update(task_params)
+      redirect_to task_url(@task), notice: "Task was successfully updated."
     else
-      if request.format.html?
-        render :edit, status: :unprocessable_entity
-      else
-        render json: @task.errors, status: :unprocessable_entity
-      end
+      render :edit, status: :unprocessable_entity
     end
   end
 
