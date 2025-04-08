@@ -1,7 +1,6 @@
 module Api
   module V1
     class TasksController < Api::V1::ApiBaseController
-      include ErrorHandler
       def index
         @tasks = Task.all
         if @tasks.any?

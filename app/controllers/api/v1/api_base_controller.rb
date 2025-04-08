@@ -1,6 +1,8 @@
 module Api
   module V1
     class ApiBaseController < ActionController::API
+      include ErrorHandler
+
       before_action :json_format
 
       private

@@ -43,6 +43,7 @@ A simple rails application that allows users to manage tasks with image uploads 
 
 - rails db:create
 - rails db:migrate
+- rails db:seed
 
 
 ## Start the development server
