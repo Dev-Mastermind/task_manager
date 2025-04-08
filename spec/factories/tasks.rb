@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :task do
     sequence(:title) { |n| "Task Title #{n}" }
-    description { "Some description" }
-    due_date { Date.today + 1.day }
+    description { Faker::Lorem.sentence }
+    due_date { Faker::Date.forward(days: 1) }
     completed { false }
   end
 end
