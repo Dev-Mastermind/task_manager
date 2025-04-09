@@ -68,5 +68,5 @@ group :test do
   gem "rails-controller-testing"
   gem "shoulda-matchers", "~> 6.0"
   gem "database_cleaner-active_record", "~> 2.1"
-  gem "rspec-rails", "~> 6.1"
+  gem "rspec-rails", "~> 7.1"
 end
