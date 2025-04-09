@@ -7,6 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+image_path = Rails.root.join("spec", "fixtures", "files", "sample.jpg")
 
 3.times do |i|
   task = Task.create!(
@@ -16,6 +17,5 @@
     completed: i.even?
   )
 
-  image_path = Rails.root.join("spec", "fixtures", "files", "sample.jpg")
   task.image.attach(io: File.open(image_path), filename: "sample.jpg", content_type: "image/jpeg")
 end
